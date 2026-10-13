@@ -1,0 +1,16 @@
+command: [
+  "flask",
+  "--app",
+  "app.py",
+  "run"
+]
+
+env:
+  - name: DATABRICKS_WAREHOUSE_ID
+    valueFrom: sql-warehouse
+
+  - name: TWITTER_ANALYSIS_JOB_ID
+    valueFrom: job
+
+  - name: JOB_TRIGGER_TOKEN
+    valueFrom: secret
